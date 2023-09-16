@@ -143,12 +143,14 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
+    -- https://github.com/folke/tokyonight.nvim
+      "folke/tokyonight.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+      config = function()
+        vim.cmd.colorscheme 'tokyonight-night'
+      end,
   },
 
   {
@@ -157,7 +159,7 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'onedark',
         component_separators = '|',
         section_separators = '',
@@ -534,6 +536,24 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
+-- use {
+--   'nvim-tree/nvim-tree.lua',
+--   requires = {
+--     'nvim-tree/nvim-web-devicons', -- optional
+--   },
+-- }
+-- vim.opt.termguicolors = true
+-- require("nvim-tree").setup({
+--   sort_by = "case_sensitive",
+--   view = {
+--     width = 30,
+--   },
+--   renderer = {
+--     group_empty = true,
+--   },
+--   filters = {
+--     dotfiles = true,
+--   },
+-- })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
