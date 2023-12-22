@@ -32,6 +32,11 @@ return {
         }
       },
   })
+    local args = vim.fn.argv()
+    if not vim.g.neotree_opened and #args == 0 then
+      vim.cmd "Neotree filesystem reveal action=focus position=current"
+      vim.g.neotree_opened = true
+    end
     vim.keymap.set('n', '<leader>p', ':Neotree filesystem toggle=true<CR>', { desc = 'Open File Tree' })
   end
 }
