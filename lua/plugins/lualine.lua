@@ -60,9 +60,9 @@ return   {
           },
           lualine_x = {},
           lualine_y = {
+            {'filetype'},
             {'encoding',fmt = string.upper,},
             {'fileformat',fmt = string.upper,icons_enabled = false,},
-            {'filetype' }
           },
           lualine_z = {},
       },
