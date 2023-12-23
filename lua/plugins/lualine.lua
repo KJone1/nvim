@@ -25,7 +25,6 @@ return   {
           },
       },
           lualine_c = {
-            'diff',
             {
               'diagnostics',
               source = { 'nvim' },
