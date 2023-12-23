@@ -27,10 +27,7 @@ vim.opt.rtp:prepend(lazypath)
 
 --
 local plugins = {
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  { 'folke/which-key.nvim', opts = {} }, -- Useful plugin to show you pending keybinds.
 
   {
     -- Autocompletion
@@ -45,30 +42,6 @@ local plugins = {
 
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
-    },
-  },
-
-  {
-    "okuuva/auto-save.nvim",
-    cmd = "ASToggle", -- optional for lazy loading on command
-    event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
-    opts = {
-    -- your config goes here
-    -- or just leave it empty :)
-    },
-  },
-
-  {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = true,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
-      },
     },
   },
 
