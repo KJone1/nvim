@@ -46,8 +46,6 @@ local plugins = {
   },
 
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
 
   -- Import file from lua/plugins folder
   { import = "plugins" }
