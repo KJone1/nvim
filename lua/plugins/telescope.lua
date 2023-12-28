@@ -3,6 +3,7 @@ return {
   branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope-project.nvim',
     -- Fuzzy Finder Algorithm which requires local dependencies to be built.
     -- Only load if `make` is available. Make sure you have the system
     -- requirements installed.
@@ -16,18 +17,18 @@ return {
       end,
       config = function()
         require('telescope').setup {
-        defaults = {
-          mappings = {
-            i = {
-              ['<C-u>'] = false,
-              ['<C-d>'] = false,
+          defaults = {
+            mappings = {
+              i = {
+                ['<C-u>'] = false,
+                ['<C-d>'] = false,
+              },
             },
-        },
-      },
-      }
+          },
+        }
 
       -- Enable telescope fzf native, if installed
-      pcall(require('telescope').load_extension, 'fzf')
+      pcall(require('telescope').load_extension,'fzf')
 
       -- See `:help telescope.builtin`
       vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
@@ -48,7 +49,12 @@ return {
       vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
       vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]resume' })
-
+      vim.api.nvim_set_keymap(
+        'n',
+        '<leader>p',
+        ":lua require'telescope'.extensions.project.project{}<CR>",
+        {noremap = true, silent = true,desc = 'Open Saved [P]rojects'}
+)
       end
     },
   },
