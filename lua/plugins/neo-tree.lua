@@ -26,6 +26,9 @@ return {
       window = {
         position = "left",
         width = 25,
+        mappings = {
+          ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false }},
+        },
         mapping_options = {
           noremap = true,
           nowait = true,
@@ -37,7 +40,7 @@ return {
       vim.cmd "Neotree filesystem reveal action=focus position=current"
       vim.g.neotree_opened = true
     end
-      vim.keymap.set('n', 'po', ':Neotree filesystem action=show toggle=true<CR>', { desc = '[O]pen File Tree' })
-      vim.keymap.set('n', 'pf', ':Neotree filesystem action=focus<CR>', { desc = '[F]ocs on File Tree' })
+      vim.keymap.set('n', 'po', ':Neotree filesystem action=show toggle=true<CR>', { noremap = true, silent = true, desc = '[O]pen File Tree' })
+      vim.keymap.set('n', 'pf', ':Neotree filesystem action=focus<CR>', { noremap = true, silent = true, desc = '[F]ocs on File Tree' })
   end
 }
