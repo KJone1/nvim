@@ -25,7 +25,7 @@ return {
       },
       window = {
         position = "left",
-        width = 25,
+        width = 30,
         mappings = {
           ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false }},
         },
@@ -42,5 +42,7 @@ return {
     end
       vim.keymap.set('n', 'po', ':Neotree filesystem action=show toggle=true<CR>', { noremap = true, silent = true, desc = '[O]pen File Tree' })
       vim.keymap.set('n', 'pf', ':Neotree filesystem action=focus<CR>', { noremap = true, silent = true, desc = '[F]ocs on File Tree' })
+      vim.keymap.set('n', 'pot', ':Neotree filesystem action=show toggle=true<CR>', { noremap = true, silent = true, desc = '[T]oggle File Tree' })
+      vim.keymap.set('n', 'pof', ':Neotree filesystem action=focus<CR>', { noremap = true, silent = true, desc = '[F]ocus on File Tree' })
   end
 }
