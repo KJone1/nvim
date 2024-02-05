@@ -1,8 +1,8 @@
-return   {
+return {
     -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
+  'nvim-lualine/lualine.nvim',
    -- See `:help lualine.txt`
-    opts = {
+  opts = {
       options = {
         icons_enabled = true,
         theme = 'gruvbox-material',
@@ -66,6 +66,6 @@ return   {
           },
           lualine_z = {},
       },
-      },
-    }
+    },
+  }
 
