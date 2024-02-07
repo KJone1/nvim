@@ -40,7 +40,5 @@ return {
     --   vim.cmd "Neotree filesystem reveal action=focus position=current"
     --   vim.g.neotree_opened = true
     -- end
-      vim.keymap.set('n', 'pot', ':Neotree filesystem action=show toggle=true<CR>', { noremap = true, silent = true, desc = '[T]oggle File Tree' })
-      vim.keymap.set('n', 'pof', ':Neotree filesystem action=focus<CR>', { noremap = true, silent = true, desc = '[F]ocus on File Tree' })
   end
 }

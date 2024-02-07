@@ -5,5 +5,5 @@ return{
     dependencies = {
         "nvim-lua/plenary.nvim",
     },
-    vim.keymap.set('n', 'pg', ':LazyGit<CR>', { noremap = true, silent = true, desc = 'Open Lazy[G]it' })
+    -- vim.keymap.set('n', 'pg', ':LazyGit<CR>', { noremap = true, silent = true, desc = 'Open Lazy[G]it' })
 }
