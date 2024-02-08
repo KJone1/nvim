@@ -40,7 +40,7 @@ M.telescope = {
     ['<leader>p']       = { ":lua require'telescope'.extensions.project.project{}<CR>", 'Open Saved Projects' },
     ['<leader>sf']      = { require('telescope.builtin').find_files, '[S]earch [F]iles' },
     ['<leader>sd']      = { require('telescope.builtin').diagnostics, '[S]earch [D]iagnostics' },
-    ['<leader>so']       = { require('telescope.builtin').oldfiles, 'Find recently opened files' },
+    ['<leader>so']      = { require('telescope.builtin').oldfiles, 'Find recently opened files' },
     ['<leader><space>'] = { require('telescope.builtin').buffers, 'Find open buffers' },
     ['<leader>f'] = { function()
       require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
