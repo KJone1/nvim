@@ -1,5 +1,7 @@
 return {
     'CWood-sdf/spaceport.nvim',
-    opts = {},
+    opts = {
+        lastViewTime = "today"
+    },
     lazy = false, -- load spaceport immediately
 }
