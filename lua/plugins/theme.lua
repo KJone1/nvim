@@ -6,12 +6,12 @@ local themes = {
     priority = 1000,
   },
   {
+    -- Default theme
     "rebelot/kanagawa.nvim",
     lazy = false,
     event = "User ColorSchemeLoad",
     priority = 1000,
     config = function()
-      -- Default theme
       vim.cmd.colorscheme("kanagawa-wave")
     end,
   },
