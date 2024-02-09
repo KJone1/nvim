@@ -21,14 +21,13 @@ return {
             mappings = {
               i = {
                 ['<C-u>'] = false,
-                ['<C-d>'] = false,
+                ['<C-d>'] = require('telescope.actions').delete_buffer,
               },
             },
           },
         }
       -- Enable telescope fzf native, if installed
       pcall(require('telescope').load_extension,'fzf')
-      
       end
     },
   },
