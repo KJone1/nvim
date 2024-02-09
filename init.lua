@@ -53,8 +53,6 @@ local plugins = {
     },
   },
 
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-
   -- Import file from lua/plugins folder
   { import = "plugins" }
 
