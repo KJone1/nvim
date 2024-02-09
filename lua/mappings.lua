@@ -4,12 +4,10 @@ M.general = {
   n = { -- Normal mode mappings
     ['pt'] = {':Twilight<CR>','Twilight Mode' },
     ['pp'] = {':Spaceport<CR>','Open Projects' },
-    ['<leader>/'] = {'<Cmd>lua require("Comment.api").toggle.linewise.current()<CR>', 'Comment linewise' }
   },
   i = { -- Insert mode mappings
   },
   v = { -- Visual mode mappings
-    ['<leader>/'] = {'<ESC><Cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', 'Comment linewise selected text' }
   },
 }
 
@@ -30,7 +28,16 @@ M.tree = {
 
 M.text = {
   n = {
-    ['pm'] = {':MarkdownPreview<CR>','Open Markdown Preview' }
+    ['pm'] = {':MarkdownPreview<CR>','Open Markdown Preview' },
+    ['<A-UP>'] = {':m .-2<CR>==','Move one line up' },
+    ['<A-DOWN>'] = {':m .+1<CR>==','Move one line down' },
+    ['<leader>/'] = {'<Cmd>lua require("Comment.api").toggle.linewise.current()<CR>', 'Comment linewise' },
+
+  },
+  v = {
+    ['<A-UP>'] = {":m '<-2<CR>gv=gv",'Move one line up' },
+    ['<A-DOWN>'] = {":m '>+1<CR>gv=gv",'Move one line down' },
+    ['<leader>/'] = {'<ESC><Cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', 'Comment linewise selected text' }
   }
 }
 
