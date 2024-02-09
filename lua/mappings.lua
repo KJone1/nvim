@@ -38,6 +38,11 @@ M.text = {
     ['<A-UP>'] = {":m '<-2<CR>gv=gv",'Move selected lines up' },
     ['<A-DOWN>'] = {":m '>+1<CR>gv=gv",'Move selected lines down' },
     ['<leader>/'] = {'<ESC><Cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', 'Comment linewise selected text' }
+  },
+  i = {
+    ['<C-z>'] = {'<C-o>u', 'Undo' },
+    ['<C-y>'] = {'<C-o>y', 'Redo' },
+    ['<C-s>'] = {'<C-o>:w<CR>', 'Save' },
   }
 }
 
