@@ -43,9 +43,8 @@ M.text = {
 
 M.telescope = {
   n = {
-
     ['<leader>p']       = { ":lua require'telescope'.extensions.project.project{}<CR>", 'Open Saved Projects' },
-    ['<leader>sf']      = { require('telescope.builtin').find_files, '[S]earch [F]iles' },
+    ['<leader>e']       = { require('telescope.builtin').find_files, 'Explore Files in current dir' },
     ['<leader>sd']      = { require('telescope.builtin').diagnostics, '[S]earch [D]iagnostics' },
     ['<leader>so']      = { require('telescope.builtin').oldfiles, 'Find recently opened files' },
     ['<leader><space>'] = { require('telescope.builtin').buffers, 'Find open buffers' },
@@ -56,7 +55,11 @@ M.telescope = {
         wrap_results = true,
       })
       end, '[/] Fuzzily search in current buffer' },
-
+    ['<leader>cs'] = {
+      function()
+        vim.api.nvim_exec_autocmds("User", { pattern = "ColorSchemeLoad" })
+        require("telescope.builtin").colorscheme()
+      end, 'Explore colorschemes'}
   }
 }
 return M
