@@ -4,6 +4,7 @@ M.general = {
   n = { -- Normal mode mappings
     ['pt'] = {':Twilight<CR>','Twilight Mode' },
     ['pp'] = {':Spaceport<CR>','Open Projects' },
+    ["<leader>sr"] = {'function() require("spectre").open() end', 'Search and Replace (Spectre)' },
   },
   i = { -- Insert mode mappings
   },
@@ -32,17 +33,22 @@ M.text = {
     ['<A-UP>'] = {':m .-2<CR>==','Move one line up' },
     ['<A-DOWN>'] = {':m .+1<CR>==','Move one line down' },
     ['<leader>/'] = {'<Cmd>lua require("Comment.api").toggle.linewise.current()<CR>', 'Comment linewise' },
-
+    ['<S-A-DOWN>'] = {':t.<CR>', 'Duplicate line' },
   },
   v = {
     ['<A-UP>'] = {":m '<-2<CR>gv=gv",'Move selected lines up' },
     ['<A-DOWN>'] = {":m '>+1<CR>gv=gv",'Move selected lines down' },
-    ['<leader>/'] = {'<ESC><Cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', 'Comment linewise selected text' }
+    ['<leader>/'] = {'<ESC><Cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', 'Comment linewise selected text' },
+    ['<S-A-DOWN>'] = {":t.'><CR>gv=gv", 'Duplicate line' },
+
   },
   i = {
     ['<C-z>'] = {'<C-o>u', 'Undo' },
     ['<C-y>'] = {'<C-o>y', 'Redo' },
+    ['<C-x>'] = {'<C-o>dd', 'Cut' },
     ['<C-s>'] = {'<C-o>:w<CR>', 'Save' },
+    ['<S-Tab>'] = {'<BS>', 'Outdent' },
+    ['<S-A-DOWN>'] = {'<C-o>:t.<CR><C-o>==', 'Duplicate line' },
   }
 }
 
