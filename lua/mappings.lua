@@ -39,7 +39,7 @@ M.text = {
     ['<A-UP>'] = {":m '<-2<CR>gv=gv",'Move selected lines up' },
     ['<A-DOWN>'] = {":m '>+1<CR>gv=gv",'Move selected lines down' },
     ['<leader>/'] = {'<ESC><Cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', 'Comment linewise selected text' },
-    ['<S-A-DOWN>'] = {":t.'><CR>gv=gv", 'Duplicate line' },
+    ['<S-A-DOWN>'] = {":t'>\\<CR>gv=gv", 'Duplicate line' },
 
   },
   i = {
