@@ -4,7 +4,7 @@ M.general = {
   n = { -- Normal mode mappings
     ['pt'] = {':Twilight<CR>','Twilight Mode' },
     ['pp'] = {':Spaceport<CR>','Open Projects' },
-    ["<leader>sr"] = {'function() require("spectre").open() end', 'Search and Replace (Spectre)' },
+    ["<leader>sr"] = {':Spectre<CR>', 'Search and Replace (Spectre)' },
   },
   i = { -- Insert mode mappings
   },
