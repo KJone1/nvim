@@ -44,7 +44,7 @@ M.text = {
   },
   i = {
     ['<C-z>'] = {'<C-o>u', 'Undo' },
-    ['<C-y>'] = {'<C-o>y', 'Redo' },
+    ['<C-y>'] = {'<C-o>:redo<CR>', 'Redo' },
     ['<C-x>'] = {'<C-o>dd', 'Cut' },
     ['<C-s>'] = {'<C-o>:w<CR>', 'Save' },
     ['<S-Tab>'] = {'<BS>', 'Outdent' },
