@@ -40,6 +40,8 @@ M.text = {
     ['<A-DOWN>'] = {":m '>+1<CR>gv=gv",'Move selected lines down' },
     ['<leader>/'] = {'<ESC><Cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', 'Comment linewise selected text' },
     ['<S-A-DOWN>'] = {":t'>\\<CR>gv=gv", 'Duplicate line' },
+    ['<Tab>'] = {">gv", 'Indent' },
+    ['<S-Tab>'] = {"<gv", 'Outdent' },
 
   },
   i = {
@@ -55,6 +57,7 @@ M.text = {
 M.telescope = {
   n = {
     ['<leader>p']       = { ":lua require'telescope'.extensions.project.project{}<CR>", 'Open Saved Projects' },
+    ['<leader>t']       = { ":TodoTelescope keywords=TODO,FIX<CR>", 'List TODOs' },
     ['<leader>e']       = { require('telescope.builtin').find_files, 'Explore Files in current dir' },
     ['<leader>sd']      = { require('telescope.builtin').diagnostics, '[S]earch [D]iagnostics' },
     ['<leader>so']      = { require('telescope.builtin').oldfiles, 'Find recently opened files' },
