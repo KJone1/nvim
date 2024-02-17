@@ -11,6 +11,7 @@ return {
               prompt_path = true,
               select_buffer = true,
               display_stat = false,
+              dir_icon = " ",
               hidden = {
                 -- file_browser = true,
                 -- folder_browser = false,
