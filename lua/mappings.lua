@@ -18,15 +18,6 @@ M.git = {
   },
 }
 
-M.tree = {
-  n = {
-    ['pot'] = {':Neotree filesystem action=show toggle=true<CR>','Toggle File Tree' },
-    ['pof'] = {':Neotree filesystem action=focus<CR>','Focus on File Tree' },
-  },
-  v = {
-  }
-}
-
 M.text = {
   n = {
     ['pm'] = {':MarkdownPreview<CR>','Open Markdown Preview' },
@@ -49,7 +40,7 @@ M.text = {
     ['<C-y>'] = {'<C-o>:redo<CR>', 'Redo' },
     ['<C-x>'] = {'<C-o>dd', 'Cut' },
     ['<C-s>'] = {'<C-o>:w<CR>', 'Save' },
-    ['<S-Tab>'] = {'<BS>', 'Outdent' },
+    ['<S-Tab>'] = {'<C-d>', 'Outdent' },
     ['<S-A-DOWN>'] = {'<C-o>:t.<CR><C-o>==', 'Duplicate line' },
   }
 }
@@ -58,7 +49,8 @@ M.telescope = {
   n = {
     ['<leader>p']       = { ":lua require'telescope'.extensions.project.project{}<CR>", 'Open Saved Projects' },
     ['<leader>t']       = { ":TodoTelescope keywords=TODO,FIX<CR>", 'List TODOs' },
-    ['<leader>e']       = { require('telescope.builtin').find_files, 'Explore Files in current dir' },
+    -- ['<leader>e']       = { require('telescope.builtin').find_files, 'Explore Files in current dir' },
+    ['<leader>e']       = { ':Telescope file_browser cwd=%:p:h<CR>', 'Explore Files in current dir' },
     ['<leader>sd']      = { require('telescope.builtin').diagnostics, '[S]earch [D]iagnostics' },
     ['<leader>so']      = { require('telescope.builtin').oldfiles, 'Find recently opened files' },
     ['<leader><space>'] = { require('telescope.builtin').buffers, 'Find open buffers' },
