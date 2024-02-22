@@ -2,6 +2,8 @@
 
 forked from kickstart.nvim
 
+Moved to https://github.com/KJone1/dotfiles
+
 ### Introduction
 
 Requirements:
