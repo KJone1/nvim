@@ -2,7 +2,7 @@
 
 forked from kickstart.nvim
 
-Moved to https://github.com/KJone1/dotfiles
+Moved to [https://github.com/KJone1/dotfiles](https://github.com/KJone1/dotfiles/tree/master/.config/nvim)
 
 ### Introduction
 
